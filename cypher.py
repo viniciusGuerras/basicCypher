@@ -1,8 +1,8 @@
-import sys
 alpha = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
 output = []
 
 def main():
+    #get the user input
     answer = int(input("do you want to encrypt(1) or decrypt(2)? "))
     while answer != 1 and answer != 2:
             print("not a correct number!")
@@ -15,7 +15,7 @@ def main():
             print(decrypto(word, shift))
         
 def crypto(a, b):   
-
+    #change the letter(a) by the shift(b)
     for letter in a:
         if letter in alpha:   
             num = alpha.index(letter)
@@ -31,6 +31,7 @@ def crypto(a, b):
     return "".join(output)
 
 def decrypto(a, b):   
+    #change the letter(a) by the shift(b)
     for letter in a:
         if letter in alpha:   
             num = alpha.index(letter)
